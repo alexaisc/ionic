@@ -2,8 +2,9 @@
  'use strict';
  angular.module('starter')
         .controller('FindController',FindController);
- FindController.$inject=['$scope'];
- function FindController($scope){
+ FindController.$inject=['$scope','$rootScope'];
+ function FindController($scope, $rootScope){
+
    var vm=this;
    vm.songs=[
      {
@@ -26,9 +27,20 @@
     }
 
   ];
+
+     vm.addFavorite=addFavorite;
+     function addFavorite(){
+       $rootScope.favorites.push(vm.songs[0]);
+       vm.songs.splice(0,1);
+       //console.log( $rootScope.favorites.length);
+     }
+       vm.discardSong=discardSong;
+     function discardSong(){
+       vm.songs.splice(0,1);
+       //console.log(vm.songs.length);
+     }
+
 }
 
 
 })();
-
-    
