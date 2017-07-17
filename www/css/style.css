@@ -5,3 +5,7 @@
 .absolute{
   position: absolute;
 }
+.button_play{
+  position:absolute;
+  z-index: 3333;
+}
