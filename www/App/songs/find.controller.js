@@ -42,7 +42,6 @@ function removeFirstSong(){
 }
 
 function concatSongs(){
-
    getSong().then(function(songs){
     vm.songs=vm.songs.concat(songs.data);
       playSong(vm.songs[0].preview_url);
