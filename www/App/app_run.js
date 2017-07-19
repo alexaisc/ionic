@@ -13,8 +13,8 @@ angular.module('starter').run(function($ionicPlatform,$rootScope) {
       StatusBar.styleDefault();
     }
     $rootScope.favorites=[];
-    FCMPlugin.getToken(function(token){
-    alert(token);
+FCMPlugin.getToken(function(token){
+console.log(token);
 });
 FCMPlugin.onNotification(function(data){
     if(data.wasTapped){

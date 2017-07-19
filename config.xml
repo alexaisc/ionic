@@ -84,4 +84,5 @@
     <plugin name="cordova-plugin-statusbar" spec="~2.2.1" />
     <plugin name="ionic-plugin-keyboard" spec="~2.2.1" />
     <plugin name="cordova-plugin-media" spec="~3.0.1" />
+    <plugin name="cordova-plugin-fcm" spec="~2.1.2" />
 </widget>
